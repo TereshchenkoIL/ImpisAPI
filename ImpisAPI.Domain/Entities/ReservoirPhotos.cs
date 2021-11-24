@@ -3,9 +3,9 @@ using ImpisAPI.Domain.Interfaces;
 
 namespace ImpisAPI.Domain.Entities
 {
-    public class ReservoirPhotos : IEntity
+    public class ReservoirPhotos 
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public bool IsDeleted { get; set; }
         public Reservoir Reservoir { get; set; }
         public string Url { get; set; }

@@ -8,15 +8,15 @@ namespace ImpisAPI.Application.Interfaces
 {
     public interface IReservoirPhotoService
     {
-        Task<PhotoDto> GetById(Guid photoId);
+        Task<PhotoDto> GetById(string photoId);
         
         Task<IEnumerable<PhotoDto>> GetAllAsync();
 
-        Task<PhotoDto> CreateAsync(IFormFile file);
+        Task<PhotoDto> CreateAsync(IFormFile file, Guid reservoirId);
        
-        Task DeleteAsync(Guid id);
+        Task DeleteAsync(string id);
         
-        Task SetMainAsync(Guid id);
-        Task SetBackgroundAsync(Guid id);
+        Task SetMainAsync(string id, Guid reservoirId);
+        Task SetBackgroundAsync(string id, Guid reservoirId);
     }
 }

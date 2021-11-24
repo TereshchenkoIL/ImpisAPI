@@ -8,5 +8,6 @@ namespace ImpisAPI.Domain.Entities
         public string DisplayName { get; set; }
         
         public ICollection<UserPhoto> Photos { get; set; }
+        public ICollection<Topic> Topics { get; set; }
     }
 }

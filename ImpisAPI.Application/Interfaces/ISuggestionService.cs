@@ -5,7 +5,7 @@ using ImpisAPI.Application.DTOs;
 
 namespace ImpisAPI.Application.Interfaces
 {
-    public interface ISuggestionRepository
+    public interface ISuggestionService
     {
         Task<IEnumerable<SuggestionDto>> GetAllAsync();
         Task<SuggestionDto> GetByIdAsync(Guid id);

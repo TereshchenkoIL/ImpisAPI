@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpisAPI.Domain", "ImpisAPI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpisAPI.Application", "ImpisAPI.Application\ImpisAPI.Application.csproj", "{0F2CC8E9-6B0B-4102-88E9-538B98642C6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpisAPI.Infrastructure", "ImpisAPI.Infrastructure\ImpisAPI.Infrastructure.csproj", "{F2F7C1FB-40EB-4A68-A172-AD904BC7FF65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{0F2CC8E9-6B0B-4102-88E9-538B98642C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F2CC8E9-6B0B-4102-88E9-538B98642C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F2CC8E9-6B0B-4102-88E9-538B98642C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F7C1FB-40EB-4A68-A172-AD904BC7FF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F7C1FB-40EB-4A68-A172-AD904BC7FF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F7C1FB-40EB-4A68-A172-AD904BC7FF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F7C1FB-40EB-4A68-A172-AD904BC7FF65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

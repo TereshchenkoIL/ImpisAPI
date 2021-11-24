@@ -9,6 +9,7 @@ namespace ImpisAPI.Domain.Repositories
     {
         Task<Sales> GetByIdAsync(Guid reservoirId);
         Task<IEnumerable<Sales>> GetAllAsync();
+        Task<IEnumerable<Sales>> GetAllByReservoirIdAsync(Guid id);
         void Create(Sales sales);
         void Update(Sales aSales); 
         void Delete(Guid id);

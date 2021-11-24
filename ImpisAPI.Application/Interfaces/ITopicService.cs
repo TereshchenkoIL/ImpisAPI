@@ -13,8 +13,6 @@ namespace ImpisAPI.Application.Interfaces
         
        
        Task<TopicDto> GetByIdAsync(Guid topicId);
-
-       Task<IEnumerable<TopicDto>> GetLikedTopics(string username);
        
        
        Task<IEnumerable<TopicDto>> GetAllAsync();

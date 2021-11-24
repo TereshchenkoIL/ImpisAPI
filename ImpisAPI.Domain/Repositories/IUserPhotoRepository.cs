@@ -6,13 +6,13 @@ using ImpisAPI.Domain.Entities;
 
 namespace ImpisAPI.Domain.Repositories
 {
-    public interface IPhotoRepository 
+    public interface IUserPhotoRepository 
     {
-        Task<UserPhoto> GetById(Guid photoId);
+        Task<UserPhoto> GetById(string photoId);
         Task<IEnumerable<UserPhoto>> GetAllAsync();
         void Create(UserPhoto entity);
         void Update(UserPhoto entity); 
-        void Delete(Guid id);
+        void Delete(string id);
     }
 
   

@@ -6,7 +6,7 @@ using ImpisAPI.Domain.Entities;
 
 namespace ImpisAPI.Application.Interfaces
 {
-    public interface IReservoirRepository
+    public interface IReservoirService
     {
         Task<IEnumerable<ReservoirDto>> GetAllAsync();
         Task<IEnumerable<ReservoirDto>> GetAllByUserIdAsync(string userId);

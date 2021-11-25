@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace ImpisAPI.Application.Services
 {
-    public class PhotoService : IUserPhotoService
+    public class UserPhotoService : IUserPhotoService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -21,7 +21,7 @@ namespace ImpisAPI.Application.Services
         private readonly IUserPhotoRepository _photoRepository;
         private readonly IUserRepository _userRepository;
 
-        public PhotoService(IUnitOfWork unitOfWork, IMapper mapper, IUserAccessor userAccessor, IPhotoAccessor photoAccessor, IUserPhotoRepository photoRepository, IUserRepository userRepository)
+        public UserPhotoService(IUnitOfWork unitOfWork, IMapper mapper, IUserAccessor userAccessor, IPhotoAccessor photoAccessor, IUserPhotoRepository photoRepository, IUserRepository userRepository)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;

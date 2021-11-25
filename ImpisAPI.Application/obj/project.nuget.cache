@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EhYygrP78Zf0j+SX6vhWVOWdFvFHWTBfPhYR9tMBiXDHtylcvvidS++3IKoeanG01TzHsxCGemrV74RsYFTGAg==",
+  "dgSpecHash": "/+0cT6j6cqbVcuP0zrKLlznZiqKjxrvP+Z4Zt2+z7l41ybW3z3+euwC86EBWVR20Cko2iHcX1xcnwuYC0mpdTA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Univer\\AtaRK\\Project\\ImpisAPI\\ImpisAPI.Application\\ImpisAPI.Application.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.12\\microsoft.extensions.identity.core.5.0.12.nupkg.sha512",

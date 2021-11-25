@@ -26,9 +26,9 @@ namespace ImpisAPI.Persistence.Repositories
                 .FirstOrDefaultAsync(x => x.Id == photoId);
         }
 
-        public Task<IEnumerable<UserPhoto>> GetAllAsync()
+        public async Task<IEnumerable<UserPhoto>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.UserPhotos.ToListAsync();
         }
 
         public void Create(UserPhoto entity)

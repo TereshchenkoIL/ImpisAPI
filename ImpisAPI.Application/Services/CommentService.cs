@@ -4,12 +4,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using ImpisAPI.Application.DTOs;
+using ImpisAPI.Application.Interfaces;
 using ImpisAPI.Domain.Entities;
 using ImpisAPI.Domain.Repositories;
 
 namespace ImpisAPI.Application.Services
 {
-    public class CommentService
+    public class CommentService : ICommentService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;

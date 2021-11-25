@@ -57,7 +57,7 @@ namespace ImpisAPI.Application.Services
             
             var photoResult = await _photoAccessor.AddPhoto(file);
 
-            var photoForCreation = new ReservoirPhotos()
+            var photoForCreation = new ReservoirPhoto()
             {
                 Id = photoResult.PublicId,
                 Url = photoResult.Url
@@ -72,7 +72,8 @@ namespace ImpisAPI.Application.Services
 
         public async Task DeleteAsync(string id)
         {
-            _photoRepository.Delete(id);
+            var photo = await _photoRepository.GetByIdAsync(id);
+            _photoRepository.Delete(photo);
             var result = await _unitOfWork.SaveChangesAsync();
 
             

@@ -9,8 +9,9 @@ namespace ImpisAPI.Domain.Repositories
     {
         Task<Suggestion> GetByIdAsync(Guid waterParameterId);
         Task<IEnumerable<Suggestion>> GetAllAsync();
+        Task<IEnumerable<Suggestion>> GetAllByTypeIdAsync(Guid typeId);
         void Create(Suggestion suggestion);
         void Update(Suggestion suggestion); 
-        void Delete(Guid id);
+        void Delete(Suggestion suggestion);
     }
 }

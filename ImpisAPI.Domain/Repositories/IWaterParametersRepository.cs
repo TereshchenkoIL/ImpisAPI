@@ -7,10 +7,11 @@ namespace ImpisAPI.Domain.Repositories
 {
     public interface IWaterParametersRepository
     {
-        Task<Reservoir> GetByIdAsync(Guid waterParameterId);
+        Task<WaterParameters> GetByIdAsync(Guid waterParameterId);
         Task<IEnumerable<WaterParameters>> GetAllAsync();
+        Task<IEnumerable<WaterParameters>> GetAllByReservoirIdAsync(Guid reservoirId);
         void Create(WaterParameters parameters);
         void Update(WaterParameters parameters); 
-        void Delete(Guid id);
+        void Delete(WaterParameters parameters);
     }
 }

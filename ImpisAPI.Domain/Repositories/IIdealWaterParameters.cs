@@ -12,6 +12,6 @@ namespace ImpisAPI.Domain.Repositories
         Task<IEnumerable<IdealWaterParameters>> GetByTypeIdAsync(Guid type);
         void Create(IdealWaterParameters idealWaterParameters);
         void Update(IdealWaterParameters idealWaterParameters); 
-        void Delete(Guid id);
+        void Delete(IdealWaterParameters idealWaterParameters);
     }
 }

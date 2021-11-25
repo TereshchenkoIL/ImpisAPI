@@ -12,6 +12,6 @@ namespace ImpisAPI.Domain.Repositories
         Task<IEnumerable<IdealResult>> GetByTypeIdAsync(Guid type);
         void Create(IdealResult idealResult);
         void Update(IdealResult idealResult); 
-        void Delete(Guid id);
+        void Delete(IdealResult idealResult);
     }
 }

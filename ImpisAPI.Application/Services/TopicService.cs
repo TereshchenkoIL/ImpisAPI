@@ -78,7 +78,8 @@ namespace ImpisAPI.Application.Services
 
         public async Task DeleteAsync(Guid topicId)
         {
-            _topicRepository.Delete(topicId);
+            var topic = await _topicRepository.GetByIdAsync(topicId);
+            _topicRepository.Delete(topic);
 
             var result = await _unitOfWork.SaveChangesAsync();
 

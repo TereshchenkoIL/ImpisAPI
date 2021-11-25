@@ -12,6 +12,7 @@ namespace ImpisAPI.Domain.Entities
         public string Name { get; set; }
         public ICollection<Suggestion> Suggestions { get; set; }
         public ICollection<IdealResult> IdealResults { get; set; }
+        public ICollection<IdealWaterParameters> IdealWaterParameters { get; set; }
         public ICollection<Reservoir> Reservoirs { get; set; }
     }
 }

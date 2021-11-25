@@ -7,10 +7,10 @@ namespace ImpisAPI.Domain.Repositories
 {
     public interface IReservoirPhotoRepository
     {
-        Task<ReservoirPhotos> GetByIdAsync(string id);
-        Task<IEnumerable<ReservoirPhotos>> GetAllAsync();
-        void Create(ReservoirPhotos parameters);
-        void Update(ReservoirPhotos parameters); 
-        void Delete(string id);
+        Task<ReservoirPhoto> GetByIdAsync(string id);
+        Task<IEnumerable<ReservoirPhoto>> GetAllAsync();
+        void Create(ReservoirPhoto parameters);
+        void Update(ReservoirPhoto parameters); 
+        void Delete(ReservoirPhoto parameters);
     }
 }

@@ -13,7 +13,7 @@ namespace ImpisAPI.Domain.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public int SpecQuantity { get; set; }
         public ReservoirType Type { get; set; }
-        public ICollection<ReservoirPhotos> Photos { get; set; }
+        public ICollection<ReservoirPhoto> Photos { get; set; }
         public ICollection<WaterParameters> WaterParameters { get; set; }
         public ICollection<Sales> Sales { get; set; }
     }

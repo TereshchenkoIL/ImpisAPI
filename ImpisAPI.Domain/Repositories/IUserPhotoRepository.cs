@@ -12,7 +12,7 @@ namespace ImpisAPI.Domain.Repositories
         Task<IEnumerable<UserPhoto>> GetAllAsync();
         void Create(UserPhoto entity);
         void Update(UserPhoto entity); 
-        void Delete(string id);
+        void Delete(UserPhoto entity);
     }
 
   

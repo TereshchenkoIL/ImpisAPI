@@ -12,7 +12,6 @@ namespace ImpisAPI.Domain.Repositories
         Task<AppUser> GetByUsernameAsync(string username);
         
         Task<IEnumerable<AppUser>> GetAllAsync();
-        void Update(AppUser entity);
 
     }
 }

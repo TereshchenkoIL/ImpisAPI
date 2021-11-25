@@ -11,5 +11,6 @@ namespace ImpisAPI.Domain.Entities
         public float Ph { get; set; }
         public float Turbidity{ get; set; }
         public Period Period { get; set; }
+        public ReservoirType Type { get; set; }
     }
 }

@@ -48,7 +48,8 @@ namespace ImpisAPI.Application.Services
 
         public async Task DeleteAsync(Guid suggestionId)
         {
-            _suggestionRepository.Delete(suggestionId);
+            var suggestion = await _suggestionRepository.GetByIdAsync(suggestionId);
+            _suggestionRepository.Delete(suggestion);
             await _unitOfWork.SaveChangesAsync();
         }
     }

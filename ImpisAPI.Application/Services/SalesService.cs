@@ -44,7 +44,8 @@ namespace ImpisAPI.Application.Services
 
         public async Task DeleteAsync(Guid salesId)
         {
-            _saleRepository.Delete(salesId);
+            var sales = await _saleRepository.GetByIdAsync(salesId);
+            _saleRepository.Delete(sales);
             await _unitOfWork.SaveChangesAsync();
         }
     }

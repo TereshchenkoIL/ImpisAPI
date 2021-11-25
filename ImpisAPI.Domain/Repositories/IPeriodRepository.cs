@@ -10,6 +10,6 @@ namespace ImpisAPI.Domain.Repositories
         Task<IEnumerable<Period>> GetAllAsync();
         void Create(Period period);
         void Update(Period period); 
-        void Delete(Guid id);
+        void Delete(Period period);
     }
 }

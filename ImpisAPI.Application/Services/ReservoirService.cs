@@ -49,7 +49,8 @@ namespace ImpisAPI.Application.Services
 
         public async Task DeleteAsync(Guid reservoirId)
         {
-            _reservoirRepository.Delete(reservoirId);
+            var reservoir = await _reservoirRepository.GetByIdAsync(reservoirId);
+            _reservoirRepository.Delete(reservoir);
             await _unitOfWork.SaveChangesAsync();
         }
     }

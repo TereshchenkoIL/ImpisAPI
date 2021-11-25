@@ -3,7 +3,7 @@ using ImpisAPI.Domain.Interfaces;
 
 namespace ImpisAPI.Domain.Entities
 {
-    public class ReservoirPhotos 
+    public class ReservoirPhoto 
     {
         public string Id { get; set; }
         public bool IsDeleted { get; set; }

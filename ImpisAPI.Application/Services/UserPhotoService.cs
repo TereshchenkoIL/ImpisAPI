@@ -70,13 +70,11 @@ namespace ImpisAPI.Application.Services
 
         public async Task DeleteAsync(string id)
         {
-            _photoRepository.Delete(id);
             var photo = await _photoRepository.GetById(id);
-            photo.IsMain = true;
-            
+            _photoRepository.Delete(photo);
+
             var result = await _unitOfWork.SaveChangesAsync();
 
-            
             var cloudinaryResult = await _photoAccessor.DeletePhoto(id);
 
         }

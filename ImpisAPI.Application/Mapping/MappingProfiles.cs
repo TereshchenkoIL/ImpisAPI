@@ -10,7 +10,7 @@ namespace ImpisAPI.Application.Mapping
         public MappingProfiles()
         {
             CreateMap<UserPhoto, PhotoDto>().ReverseMap();
-            CreateMap<ReservoirPhotos, PhotoDto>().ReverseMap();
+            CreateMap<ReservoirPhoto, PhotoDto>().ReverseMap();
             CreateMap<CommentCreateDto, Comment>();
             CreateMap<CommentUpdateDto, Comment>();
             CreateMap<Comment, CommentDto>()

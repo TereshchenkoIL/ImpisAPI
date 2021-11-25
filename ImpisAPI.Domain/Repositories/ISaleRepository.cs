@@ -11,7 +11,7 @@ namespace ImpisAPI.Domain.Repositories
         Task<IEnumerable<Sales>> GetAllAsync();
         Task<IEnumerable<Sales>> GetAllByReservoirIdAsync(Guid id);
         void Create(Sales sales);
-        void Update(Sales aSales); 
-        void Delete(Guid id);
+        void Update(Sales sales); 
+        void Delete(Sales sales);
     }
 }

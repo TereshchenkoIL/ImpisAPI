@@ -1,4 +1,5 @@
-﻿using ImpisAPI.Domain.Repositories;
+﻿using ImpisAPI.Domain.Entities;
+using ImpisAPI.Domain.Repositories;
 using ImpisAPI.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,10 @@ namespace ImpisAPI.Persistence.Extensions
             services.AddScoped<IReservoirPhotoRepository, ReservoirPhotoRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IWaterParametersRepository, WaterParametersRepository>();
+            services.AddScoped<IIdealResultRepository, IdealResultRepository>();
+            services.AddScoped<IIdealWaterParametersRepository, IdealWaterParametersRepository>();
+            services.AddScoped<IPeriodRepository, PeriodRepository>();
+            services.AddScoped<IReservoirTypeRepository, ReservoirTypeRepository>();
             return services;
         }
     }

@@ -9,7 +9,8 @@ namespace ImpisAPI.Application.Interfaces
     {
         Task<IEnumerable<ReservoirTypeDto>> GetAllAsync();
         Task<ReservoirTypeDto> GetByIdAsync(Guid id);
-        Task CreateAsync(ReservoirDto reservoirDto);
-        Task DeleteAsync(Guid reservoirId);
+        Task CreateAsync(ReservoirTypeDto reservoirTypeDto);
+        Task UpdateAsync(ReservoirTypeDto reservoirTypeDto);
+        Task DeleteAsync(Guid reservoirTypeId);
     }
 }

@@ -16,7 +16,7 @@ namespace ImpisAPI.Persistence
         public DbSet<ReservoirPhoto> ReservoirPhotos{ get; set; } 
         public DbSet<AppUser> Users { get; set; }
         public DbSet<Topic> Topics{ get; set; }
-        public DbSet<IdealResult> Results { get; set; }
+        public DbSet<IdealResult> IdealResults { get; set; }
         public DbSet<IdealWaterParameters> IdealWaterParameters { get; set; }
         public DbSet<Period> Periods { get; set; }
         public DbSet<Reservoir> Reservoirs { get; set; }

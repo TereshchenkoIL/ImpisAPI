@@ -19,6 +19,10 @@ namespace ImpisAPI.Application.Extensions
             services.AddScoped<ISuggestionService, SuggestionService>();
             services.AddScoped<IUserPhotoService, UserPhotoService>();
             services.AddScoped<IWaterParametersService, WaterParametersService>();
+            services.AddScoped<IIdealResultService, IdealResultService>();
+            services.AddScoped<IIdealWaterParametersService, IdealWaterParametersService>();
+            services.AddScoped<IPeriodService, PeriodService>();
+            services.AddScoped<IReservoirTypeService, ReservoirTypeService>();
             
             return services;
         }

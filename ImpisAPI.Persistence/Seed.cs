@@ -177,7 +177,7 @@ namespace ImpisAPI.Persistence
                         Weight = 120
                     },
                 };
-                await context.Results.AddRangeAsync(idealResults);
+                await context.IdealResults.AddRangeAsync(idealResults);
                 var reservoirTypes = new List<ReservoirType>()
                 {
                     new ReservoirType()

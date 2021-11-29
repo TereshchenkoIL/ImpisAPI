@@ -5,7 +5,7 @@ using ImpisAPI.Domain.Entities;
 
 namespace ImpisAPI.Domain.Repositories
 {
-    public interface IIdealWaterParameters
+    public interface IIdealWaterParametersRepository
     {
         Task<IdealWaterParameters> GetByIdAsync(Guid waterParameterId);
         Task<IEnumerable<IdealWaterParameters>> GetAllAsync();

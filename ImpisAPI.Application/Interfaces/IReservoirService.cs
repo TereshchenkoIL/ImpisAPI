@@ -11,6 +11,8 @@ namespace ImpisAPI.Application.Interfaces
         Task<IEnumerable<ReservoirDto>> GetAllAsync();
         Task<IEnumerable<ReservoirDto>> GetAllByUserIdAsync(string userId);
 
+        Task<ReservoirDto> GetByIdAsync(Guid id);
+
         Task CreateAsync(ReservoirDto topicForCreation);
        
         Task DeleteAsync(Guid reservoirId);

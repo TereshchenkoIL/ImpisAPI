@@ -9,7 +9,7 @@ namespace ImpisAPI.Application.Interfaces
     {
         Task<IEnumerable<SalesDto>> GetAllAsync();
         Task<IEnumerable<SalesDto>> GetAllByReservoirIdAsync(Guid reservoirId);
-
+        Task<SalesDto> GetByIdAsync(Guid id);
         Task CreateAsync(SalesDto salesDto);
         Task DeleteAsync(Guid salesId);
     }

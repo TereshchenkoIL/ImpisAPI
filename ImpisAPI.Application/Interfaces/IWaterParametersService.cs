@@ -9,6 +9,7 @@ namespace ImpisAPI.Application.Interfaces
     {
         Task<IEnumerable<WaterParametersDto>> GetAllAsync();
         Task<IEnumerable<WaterParametersDto>> GetAllByReservoirIdAsync(Guid reservoirId);
+        Task<WaterParametersDto> GetByIdAsync(Guid id);
         Task CreateAsync(WaterParametersDto waterParameters);
         Task DeleteAsync(Guid parametersId);
     }

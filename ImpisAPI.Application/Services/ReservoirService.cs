@@ -39,6 +39,13 @@ namespace ImpisAPI.Application.Services
             return reservoirsDto;
         }
 
+        public async Task<ReservoirDto> GetByIdAsync(Guid id)
+        {
+            var reservoir = await _reservoirRepository.GetByIdAsync(id);
+            var reservoirDto = _mapper.Map<ReservoirDto>(reservoir);
+            return reservoirDto;
+        }
+
         public async Task CreateAsync(ReservoirDto reservoirForCreation)
         {
             var reservoir = _mapper.Map<Reservoir>(reservoirForCreation);

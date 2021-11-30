@@ -42,6 +42,15 @@ namespace ImpisAPI.Application.Services
             return parametersDto;
         }
 
+        public async Task<WaterParametersDto> GetByIdAsync(Guid id)
+        {
+            var parameter = await _waterParametersRepository.GetByIdAsync(id);
+
+            var parameterDto = _mapper.Map<WaterParametersDto>(parameter);
+
+            return parameterDto;
+        }
+
         public async Task CreateAsync(WaterParametersDto waterParameters)
         {
             var parameter = _mapper.Map<WaterParameters>(waterParameters);

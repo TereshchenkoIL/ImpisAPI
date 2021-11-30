@@ -36,6 +36,13 @@ namespace ImpisAPI.Application.Services
             return salesDto;
         }
 
+        public async Task<SalesDto> GetByIdAsync(Guid id)
+        {
+            var sales = await _saleRepository.GetByIdAsync(id);
+            var salesDto = _mapper.Map<SalesDto>(sales);
+            return salesDto;
+        }
+
         public async Task CreateAsync(SalesDto salesDto)
         {
             var sales = _mapper.Map<Sales>(salesDto);

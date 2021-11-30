@@ -30,6 +30,13 @@ namespace ImpisAPI.Application.Services
             return suggestionDto;
         }
 
+        public async Task<IEnumerable<SuggestionDto>> GetAllByTypeIdAsync(Guid typeId)
+        {
+            var suggestions = await _suggestionRepository.GetAllByTypeIdAsync(typeId);
+            var suggestionDto = _mapper.Map<IEnumerable<SuggestionDto>>(suggestions);
+            return suggestionDto;
+        }
+
         public async Task<SuggestionDto> GetByIdAsync(Guid id)
         {
             var suggestion = await _suggestionRepository.GetByIdAsync(id);
@@ -44,6 +51,13 @@ namespace ImpisAPI.Application.Services
             type.Suggestions.Add(suggestion);
 
             await _unitOfWork.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(SuggestionDto suggestionDto)
+        {
+            var suggestion = _mapper.Map<Suggestion>(suggestionDto);
+           _suggestionRepository.Update(suggestion);
+           await _unitOfWork.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(Guid suggestionId)

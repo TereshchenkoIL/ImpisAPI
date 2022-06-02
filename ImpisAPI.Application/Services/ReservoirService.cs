@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -49,7 +50,7 @@ namespace ImpisAPI.Application.Services
         public async Task CreateAsync(ReservoirDto reservoirForCreation)
         {
             var reservoir = _mapper.Map<Reservoir>(reservoirForCreation);
-            _reservoirRepository.Update(reservoir);
+            await _reservoirRepository.CreateAsync(reservoir);
 
             await _unitOfWork.SaveChangesAsync();
         }

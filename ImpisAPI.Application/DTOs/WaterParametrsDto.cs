@@ -9,5 +9,6 @@ namespace ImpisAPI.Application.DTOs
         public float Ph { get; set; }
         public float Turbidity{ get; set; }
         public DateTime MeasuredAt { get; set; } = DateTime.UtcNow;
+        public Guid ReservoirId { get; set; }
     }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Contracts.Interfaces;
 using ImpisAPI.Application.DTOs;
 using ImpisAPI.Application.Interfaces;
 using ImpisAPI.Domain.Entities;
+using ImpisAPI.Domain.Interfaces;
 using ImpisAPI.Domain.Repositories;
 
 namespace ImpisAPI.Application.Services
@@ -54,11 +54,7 @@ namespace ImpisAPI.Application.Services
         public async Task<IEnumerable<TopicDto>> GetAllAsync()
         {
             var topics = await _topicRepository.GetAllAsync();
-
-            Thread.Sleep(1000);
             
-            Thread.Sleep(10000);
-
             var topicsDto = _mapper.Map<IEnumerable<TopicDto>>(topics);
             return topicsDto;
         }

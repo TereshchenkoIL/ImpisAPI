@@ -55,9 +55,10 @@ namespace ImpisAPI.Application.Services
         {
             var parameter = _mapper.Map<WaterParameters>(waterParameters);
 
-            var reservoir = await _reservoirRepository.GetByIdAsync(parameter.Reservoir.Id);
+            var reservoir = await _reservoirRepository.GetByIdAsync(waterParameters.ReservoirId);
 
             parameter.Reservoir = reservoir;
+            parameter.MeasuredAt = DateTime.UtcNow;
             _waterParametersRepository.Create(parameter);
 
             await _unitOfWork.SaveChangesAsync();

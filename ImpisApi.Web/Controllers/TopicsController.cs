@@ -52,7 +52,6 @@ namespace ImpisApi.Web.Controllers
         }
 
         
-        [Authorize(Policy = "IsCreatorOrAdmin")]
         [HttpDelete("{topicId}")]
         public async Task<IActionResult> DeleteTopic(Guid topicId)
         {

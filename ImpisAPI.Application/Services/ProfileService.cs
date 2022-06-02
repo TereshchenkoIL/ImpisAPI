@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Contracts.Interfaces;
 using ImpisAPI.Application.Interfaces;
+using ImpisAPI.Domain.Interfaces;
 using ImpisAPI.Domain.Repositories;
 using Profile = ImpisAPI.Application.DTOs.Profile;
 

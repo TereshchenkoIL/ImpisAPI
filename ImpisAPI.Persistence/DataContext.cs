@@ -33,7 +33,11 @@ namespace ImpisAPI.Persistence
                 .HasOne(t => t.Topic)
                 .WithMany(c => c.Comments)
                 .OnDelete(DeleteBehavior.Cascade);
-            
+            builder.Entity<Reservoir>()
+                .HasQueryFilter(r => !r.IsDeleted);
+            builder.Entity<Topic>()
+                .HasQueryFilter(r => !r.IsDeleted);
+
         }
     }
 }

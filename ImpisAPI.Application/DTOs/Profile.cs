@@ -1,8 +1,10 @@
-﻿namespace ImpisAPI.Application.DTOs
+﻿using System;
+
+namespace ImpisAPI.Application.DTOs
 {
     public class Profile
     {
-        
+        public Guid Id { get; set; }
         public string Username { get; set; }
 
         public string DisplayName { get; set; }

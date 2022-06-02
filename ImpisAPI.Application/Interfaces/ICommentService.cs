@@ -9,7 +9,7 @@ namespace ImpisAPI.Application.Interfaces
 {
     public interface ICommentService
     {
-       Task<CommentDto> GetByIdAsync(Guid commentId);
+        Task<CommentDto> GetByIdAsync(Guid commentId);
     
        Task<IEnumerable<CommentDto>> GetAllAsync();
        Task<IEnumerable<CommentDto>> GetAllByTopicAsync(Guid topicId);

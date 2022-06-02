@@ -24,6 +24,7 @@ namespace ImpisAPI.Persistence.Extensions
             services.AddScoped<IUserPhotoRepository, UserPhotoRepository>();
             services.AddScoped<IReservoirPhotoRepository, ReservoirPhotoRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISaleRepository, SaleRepository>();
             services.AddScoped<IWaterParametersRepository, WaterParametersRepository>();
             services.AddScoped<IIdealResultRepository, IdealResultRepository>();
             services.AddScoped<IIdealWaterParametersRepository, IdealWaterParametersRepository>();

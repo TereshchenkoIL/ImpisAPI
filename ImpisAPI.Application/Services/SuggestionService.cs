@@ -16,11 +16,12 @@ namespace ImpisAPI.Application.Services
         private readonly IReservoirTypeRepository _reservoirTypeRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public SuggestionService(ISuggestionRepository suggestionRepository, IMapper mapper, IUnitOfWork unitOfWork)
+        public SuggestionService(ISuggestionRepository suggestionRepository, IMapper mapper, IUnitOfWork unitOfWork, IReservoirTypeRepository reservoirTypeRepository)
         {
             _suggestionRepository = suggestionRepository;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
+            _reservoirTypeRepository = reservoirTypeRepository;
         }
 
         public async Task<IEnumerable<SuggestionDto>> GetAllAsync()
@@ -46,8 +47,10 @@ namespace ImpisAPI.Application.Services
 
         public async Task CreateAsync(SuggestionDto suggestionDto)
         {
-            var type = await _reservoirTypeRepository.GetByIdAsync(suggestionDto.Id);
+            var type = await _reservoirTypeRepository.GetByIdAsync(suggestionDto.Type.Id);
             var suggestion = _mapper.Map<Suggestion>(suggestionDto);
+            suggestion.Id = Guid.Empty;
+            suggestion.Type = null;
             type.Suggestions.Add(suggestion);
 
             await _unitOfWork.SaveChangesAsync();

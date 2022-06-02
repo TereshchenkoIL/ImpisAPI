@@ -366,8 +366,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10Pro\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\illia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -375,21 +374,16 @@
       "projectUniqueName": "D:\\Projects\\Univer\\AtaRK\\Project\\ImpisAPI\\ImpisAPI.Domain\\ImpisAPI.Domain.csproj",
       "projectName": "ImpisAPI.Domain",
       "projectPath": "D:\\Projects\\Univer\\AtaRK\\Project\\ImpisAPI\\ImpisAPI.Domain\\ImpisAPI.Domain.csproj",
-      "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\illia\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\Univer\\AtaRK\\Project\\ImpisAPI\\ImpisAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\illia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -423,12 +417,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

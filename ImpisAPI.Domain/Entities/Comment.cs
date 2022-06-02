@@ -6,6 +6,7 @@ namespace ImpisAPI.Domain.Entities
 {
     public class Comment : IEntity
     {
+        public Guid Id { get; set; }
         [Required]
         public string Body { get; set; } 
         
@@ -14,9 +15,6 @@ namespace ImpisAPI.Domain.Entities
         public AppUser Author { get; set; }
         
         public Topic Topic { get; set; }
-
-
-        public Guid Id { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

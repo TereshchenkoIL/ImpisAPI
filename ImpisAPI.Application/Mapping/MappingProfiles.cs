@@ -29,16 +29,21 @@ namespace ImpisAPI.Application.Mapping
                 .ForMember(d => d.Title, o => o.MapFrom(s => s.Title));
 
             CreateMap<AppUser, ImpisAPI.Application.DTOs.Profile>()
-                .ForMember(d => d.Image, o => o.MapFrom(s => s.Photos.FirstOrDefault(p => p.IsMain).Url))
+                .ForMember(d => d.Image, o => o.MapFrom(s => s.Photos.FirstOrDefault().Url))
                 .ForMember(d => d.TopicsCount, o => o.MapFrom(u => u.Topics.Count));
 
-            CreateMap<WaterParameters, WaterParametersDto>().ReverseMap();
+            CreateMap<WaterParameters, WaterParametersDto>()
+                .ForMember(w => w.ReservoirId, 
+                    expression => expression.MapFrom(w => w.Reservoir.Id));
+            CreateMap<WaterParametersDto, WaterParameters>();
+                
+            
             CreateMap<Suggestion, SuggestionDto>().ReverseMap();
             CreateMap<Sales, SalesDto>().ReverseMap();
             CreateMap<ReservoirType, ReservoirTypeDto>().ReverseMap();
             CreateMap<Reservoir, ReservoirDto>().ReverseMap();
             CreateMap<Period, PeriodDto>().ReverseMap();
-            CreateMap<IdealWaterParameters, IdealWaterParameters>().ReverseMap();
+            CreateMap<IdealWaterParameters, IdealWaterParametersDto>().ReverseMap();
             CreateMap<IdealResult, IdealResultDto>().ReverseMap();
 
 

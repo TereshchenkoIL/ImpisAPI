@@ -1,4 +1,4 @@
-﻿namespace Contracts.Interfaces
+﻿namespace ImpisAPI.Domain.Interfaces
 {
     public interface IUserAccessor
     {

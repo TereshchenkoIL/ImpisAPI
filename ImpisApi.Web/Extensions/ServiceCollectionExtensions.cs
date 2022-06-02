@@ -1,5 +1,5 @@
-﻿using Contracts.Interfaces;
-using ImpisAPI.Application.Interfaces;
+﻿using ImpisAPI.Application.Interfaces;
+using ImpisAPI.Domain.Interfaces;
 using ImpisAPI.Infrastructure.Photos;
 using ImpisAPI.Infrastructure.Security;
 using Microsoft.Extensions.Configuration;

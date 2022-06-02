@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using Contracts.Interfaces;
+using ImpisAPI.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 
 namespace ImpisAPI.Infrastructure.Security

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ImpisAPI.Domain.Entities;
 
 namespace ImpisAPI.Application.DTOs
 {
@@ -7,8 +8,8 @@ namespace ImpisAPI.Application.DTOs
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public ICollection<SuggestionDto> Suggestions { get; set; }
+        
         public ICollection<IdealResultDto> IdealResults { get; set; }
-        public ICollection<ReservoirDto> Reservoirs { get; set; }
+        public ICollection<IdealWaterParametersDto> IdealWaterParameters{ get; set; }
     }
 }

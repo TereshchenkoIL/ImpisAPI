@@ -8,11 +8,11 @@ namespace ImpisApi.Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class WaterParameters : ControllerBase
+    public class WaterParametersController: ControllerBase
     {
         private readonly  IWaterParametersService _waterParametersService;
 
-        public WaterParameters(IWaterParametersService waterParametersService)
+        public WaterParametersController(IWaterParametersService waterParametersService)
         {
             _waterParametersService = waterParametersService;
         }

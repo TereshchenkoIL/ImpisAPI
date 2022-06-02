@@ -18,13 +18,18 @@ namespace ImpisAPI.Persistence.Repositories
 
         public async Task<IEnumerable<ReservoirType>> GetAllAsync()
         {
-            var types = await _context.ReservoirTypes.ToListAsync();
+            var types = await _context.ReservoirTypes
+                .Include(type => type.IdealWaterParameters)
+                .ToListAsync();
             return types;
         }
 
         public async Task<ReservoirType> GetByIdAsync(Guid id)
         {
-            var type = await _context.ReservoirTypes.FindAsync(id);
+            var type = await _context.ReservoirTypes
+                .Include(reservoir => reservoir.Suggestions)
+                .Include(type => type.IdealWaterParameters)
+                .FirstOrDefaultAsync(reservoir => reservoir.Id == id);
 
             return type;
         }

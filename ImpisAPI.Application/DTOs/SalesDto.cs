@@ -5,7 +5,6 @@ namespace ImpisAPI.Application.DTOs
     public class SalesDto
     {
         public Guid Id { get; set; }
-        public ReservoirDto Reservoir { get; set; }
         public double Weight { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

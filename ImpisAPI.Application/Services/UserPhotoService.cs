@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Contracts.Interfaces;
 using ImpisAPI.Application.DTOs;
 using ImpisAPI.Application.Interfaces;
 using ImpisAPI.Domain.Entities;
+using ImpisAPI.Domain.Interfaces;
 using ImpisAPI.Domain.Repositories;
 using Microsoft.AspNetCore.Http;
 

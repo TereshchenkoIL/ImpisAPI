@@ -10,7 +10,7 @@ namespace ImpisAPI.Domain.Repositories
         Task<Reservoir> GetByIdAsync(Guid reservoirId);
         Task<IEnumerable<Reservoir>> GetAllAsync();
         Task<IEnumerable<Reservoir>> GetAllByUserIdAsync(string id);
-        void Create(Reservoir topic);
+        Task CreateAsync(Reservoir topic);
         void Update(Reservoir topic); 
         void Delete(Reservoir topic);
     }
